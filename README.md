@@ -36,11 +36,21 @@ Each stage under [`/stages`](./stages) represents a milestone in functionality �
 
 | Component | Interface | Description |
 |:--|:--|:--|
-| **VS1003B (Audio Decoder)** | SPI1 | Handles MP3 decoding; controlled via SCI and SDI interfaces. |
-| **MicroSD Card (Storage)** | SPI2 | Stores MP3 files read using FatFS. |
-| **Blue User Button (PA0)** | GPIO | Controls playback gestures (Next / Previous / Shuffle). |
-| **Optional 16×2 LCD (HD44780)** | GPIO (4-bit) | Displays track info (future feature). |
+| **VS1003B MP3 Decoder** | SPI1 (PA5/PA6/PA7) + GPIO (DREQ, XRST, XCS, XDCS) | Handles MP3 decoding via SCI/SDI. Audio output from VS1003B. |
+| **MicroSD Card Module** | SPI2 (PB13/PB14/PB15) | Stores MP3 files; accessed using FatFS. |
+| **Potentiometer (10kΩ)** | ADC1 (PA1 – ADC1_IN1) | Real-time volume control. |
+| **User Button** | GPIO + EXTI0 (PA0) | Playback gestures (Next / Previous / Shuffle). |
+| **UART2 (PA2/PA3)** | USART2 | Serial logging for debugging. |
+| **STM32F407 Discovery Board** | — | Main MCU handling SPI, ADC, EXTI, decoding pipeline. |
 
+More detailed pin mapping, BOM, wiring diagrams, and annotated hardware photos can be found in **[`hardware/`](./hardware)**
+
+This directory includes:
+
+- `pinout.md` — Complete MCU ↔ peripheral wiring table  
+- `bom.csv` — Full bill of materials  
+- `hardware-setup.png` — Annotated breadboard setup  
+- `README.md` — Detailed hardware overview and wiring notes  
 ---
 
 ## 🎵 Features
