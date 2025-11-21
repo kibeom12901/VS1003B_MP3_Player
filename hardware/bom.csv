@@ -1,0 +1,15 @@
+Component,Description,Qty,Notes,Typical Connections
+STM32F407 Discovery Board,Main microcontroller board,1,Provides SPI1/SPI2/UART2/ADC/EXTI control,—
+VS1003B MP3 Decoder Module,Audio codec IC breakout (SPI interface),1,SPI1 interface (PA4–PA7),XCS/XDCS/RST/DREQ pins
+Micro SD Card Adapter,SPI-mode microSD interface board,1,SPI2 interface (PB12–PB15),CS=PB12
+MicroSD Card,Storage for MP3 files (FAT32 formatted),1,Class 10 recommended,Inserted into adapter
+Potentiometer,10 kΩ linear variable resistor,1,Volume control (ADC input),PA1 = ADC1_IN1
+User Button,Pushbutton switch (momentary),1,Playback control / shuffle trigger,PA0 = EXTI0
+UART–USB Adapter,FTDI or CP2102 module,1,Serial debugging/log output,TX=PA2, RX=PA3
+16x2 LCD Display (HD44780),Optional visual feedback module,1,Used for song name/volume display,I2C or 4-bit parallel (optional)
+Breadboard,Full-size solderless breadboard,1,Main prototyping base,—
+Jumper Wires,Male-to-male Dupont wires,~30,Interconnects between modules,—
+Decoupling Capacitors,0.1 µF ceramic capacitors,3–4,Placed near VS1003, SD adapter, and MCU 3.3 V pins,—
+Audio Output Jack,Stereo 3.5 mm socket,1,Connects to VS1003 LOUT/ROUT,—
+Power Supply,3.3 V regulated USB or onboard supply,1,Ensure common ground across all modules,—
+
