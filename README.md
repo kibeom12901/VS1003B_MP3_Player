@@ -34,6 +34,8 @@ Each stage under [`/stages`](./stages) represents a milestone in functionality �
 
 ## ⚙️ Hardware Setup
 
+<img width="633" height="374" alt="Screenshot 2025-11-21 at 10 41 24 AM" src="https://github.com/user-attachments/assets/082f22d0-2315-4d6f-a61c-3c51ae907b7a" />
+
 | Component | Interface | Description |
 |:--|:--|:--|
 | **VS1003B MP3 Decoder** | SPI1 (PA5/PA6/PA7) + GPIO (DREQ, XRST, XCS, XDCS) | Handles MP3 decoding via SCI/SDI. Audio output from VS1003B. |
@@ -51,6 +53,36 @@ This directory includes:
 - `bom.csv` — Full bill of materials  
 - `hardware-setup.png` — Annotated breadboard setup  
 - `README.md` — Detailed hardware overview and wiring notes  
+---
+## 🚀 Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/kibeom12901/VS1003B_MP3_Player.git
+```
+
+### 2. Open with STM32CubeIDE
+
+- Tested on **STM32CubeIDE 1.xx.x**
+- Open the project inside any of the `/stages` folders
+- Or use the final version: `/stages/07-FINAL-modularized-lib`
+
+### 3. Build & Flash
+
+- Connect the **STM32F407 Discovery** board
+- Click **Build → Run**
+
+### 4. Prepare SD Card
+
+- Create a folder: `/music/`
+- Copy `.mp3` files (supports LFN)
+
+### 5. Run
+
+- Reset the board
+- Music should play automatically
+
 ---
 
 ## 🎵 Features
