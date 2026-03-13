@@ -7,6 +7,23 @@ Each stage under [`/stages`](./stages) represents a milestone in functionality �
 
 ---
 
+## 🎥 Demo
+
+<video width="500" controls>
+  <source src="https://youtu.be/A_l9vRIniZA" type="video/mp4">
+</video>
+
+Short demonstration of the system:
+
+- MP3 playback from SD card  
+- Potentiometer volume control (ADC-based real-time adjustment)  
+- Button gesture control:
+  - **Single press:** Next track  
+  - **Double press:** Previous track  
+  - **Long press:** Toggle shuffle mode
+
+---
+
 ## 📂 Directory Overview
 
 | Folder | Description |
