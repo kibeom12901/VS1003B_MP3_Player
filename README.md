@@ -9,9 +9,12 @@ Each stage under [`/stages`](./stages) represents a milestone in functionality �
 
 ## 🎥 Demo
 
-<video width="500" controls>
-  <source src="https://youtu.be/A_l9vRIniZA" type="video/mp4">
-</video>
+<iframe width="500" height="280"
+src="https://www.youtube.com/embed/A_l9vRIniZA"
+title="STM32 VS1003B MP3 Player Demo"
+frameborder="0"
+allowfullscreen>
+</iframe>
 
 Short demonstration of the system:
 
@@ -21,7 +24,6 @@ Short demonstration of the system:
   - **Single press:** Next track  
   - **Double press:** Previous track  
   - **Long press:** Toggle shuffle mode
-
 ---
 
 ## 📂 Directory Overview
